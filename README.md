@@ -7,7 +7,10 @@ People Detection and Tracking for Respberry Pi 3，based on DPM &amp; KCF.
 * OpenCV 3.1.0 with contrib
 * CMake
 
-Compilation has been tested on OS X 10.11.4 with Apple LLVM version 7.3.0 (clang-703.0.29).
+Compilation has been tested on 
+
+* OS X 10.11.4 with Apple LLVM version 7.3.0 (clang-703.0.29).
+* Raspbian 4.9.2-10 with GCC 4.9.2
 
 ### Windows
 * Install OpenCV 3.1 with contrib and CMake.

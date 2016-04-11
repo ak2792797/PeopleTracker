@@ -81,16 +81,25 @@ int main( int argc, char** argv )
         //DPM detection
         if( ENTER_LEAVE )
         {
+            double t = (double) getTickCount(); //start time
+
             frame.copyTo(image);
             
             // detection
             detector->detect(image, ds);
-            
+
             if (!ds.empty())
             {
                 ENTER_LEAVE = false;
                 FRAMES_FIRST = true;
             }
+
+            t = ((double) getTickCount() - t)/getTickFrequency(); //elapsed time
+            string text = format("%0.1f fps", 1.0/t); //calculate fps
+
+            // draw the tracked object
+            Scalar color(0,0,255);
+            drawDPMBoxes(frame, ds, color, text);
         }
         
         else{
@@ -119,7 +128,7 @@ int main( int argc, char** argv )
                 //DPM model detect UAV's leave
                 if (!(result.x > 0 && result.y > 0 && (640 - result.x - result.width) > 0 && (480 - result.y - result.height) > 0)){
                     ENTER_LEAVE = true;
-                    cout << "People has left....." << endl;
+                    cout << "People has left!" << endl;
                 }
             }
             t = ((double) getTickCount() - t)/getTickFrequency(); //elapsed time
