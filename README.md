@@ -18,15 +18,32 @@ Compilation has been tested on OS X 10.11.4 with Apple LLVM version 7.3.0 (clang
 ### OS X & Linux
 * Install OpenCV 3.1 with contrib and CMake.
 * Configure and complie:
-
- `mkdir build`<br />
- `cd build`<br />
- `cmake ..`<br />
- `make -j4`<br />
+	
+ 1) ``` mkdir build ```
+	
+ 2) ``` cd build ```
+	
+ 3) ``` cmake .. ```
+	
+ 4) ``` make -j4 ```
 
 # Usage
 Make sure your Camera working on /dev/video0 
 then run `./PeopleTracker`
 
-# Thanks
-[Gump-II](https://github.com/Gump-II) 's [UAV-Detect](https://github.com/Gump-II/UAV-Detect) respository inspire me.
+TO-DO
+=============
+- [ ] 输出 1080p 或 720p 视频（现在是 320*240）
+- [ ] 程序 & 算法 优化
+  - [ ] 优化跟丢检测逻辑
+  - [ ] 优化程序运行速度
+- [ ] 自动云台控制
+  - [ ] 蓝牙通信
+  - [ ] 命令收发
+- [ ] 程序 & 算法 并行化
+- [ ] 多目标跟踪（目前是多目标识别，单目标跟踪）
+- [ ] 目标出入时的检测。
+- [ ] 视频服务器搭建，向其他设备输出视频。
+
+# Special thanks to:
+[Gump-II](https://github.com/Gump-II) His [UAV-Detect](https://github.com/Gump-II/UAV-Detect) respository inspire me.
