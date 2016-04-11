@@ -1,6 +1,6 @@
 # PeopleTracker
 
-People Detection and Tracking for Respberry Pi 3，based on DPM &amp; KCF. 
+People Detection and Tracking for Respberry Pi 3，based on DPM &amp; KCF. ( OMG, only 2.0 fps when DPM, 5.0 fps when KCF on Respberry Pi 3 Single Thread mode. )
 # Build
 ### Dependencies
 * C++11
