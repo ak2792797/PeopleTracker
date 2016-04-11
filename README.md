@@ -1,6 +1,6 @@
 # PeopleTracker
 
-People Detection and Tracking based on DPM &amp; KCF.
+People Detection and Tracking for Respberry Pi 3，based on DPM &amp; KCF. 
 # Build
 ### Dependencies
 * C++11
@@ -33,16 +33,17 @@ then run `./PeopleTracker`
 
 TO-DO
 =============
+- [x] DPM & KCF 融合 
 - [ ] 输出 1080p 或 720p 视频（现在是 320*240）
 - [ ] 程序 & 算法 优化
   - [ ] 优化跟丢检测逻辑
+  - [ ] 目标出入时的检测。
   - [ ] 优化程序运行速度
 - [ ] 自动云台控制
   - [ ] 蓝牙通信
   - [ ] 命令收发
 - [ ] 程序 & 算法 并行化
 - [ ] 多目标跟踪（目前是多目标识别，单目标跟踪）
-- [ ] 目标出入时的检测。
 - [ ] 视频服务器搭建，向其他设备输出视频。
 
 # Special thanks to:
